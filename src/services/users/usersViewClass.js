@@ -8,6 +8,7 @@ class UsersViewClass{
             const rows = await conn.query(
                 `
                 select
+                    tu.idtbl_user as idUsuario,
                     tu.nombres ,
                     tu.apellidos ,
                     tu.email
@@ -27,6 +28,7 @@ class UsersViewClass{
             let conn = await mariadb.getConn();
             const rows = await conn.query(`
             select
+                tu.idtbl_user as idUsuario,
                 tu.nombres ,
                 tu.apellidos ,
                 tu.email
